@@ -6,8 +6,6 @@ on:
   push:
     # 仅在 triton-whisper 分支被推送时触发
     branches: [ "triton-whisper" ]
-    # 当一个符合 'v*.*.*' 格式的 tag 被推送时触发 (例如 v1.0.0)
-    tags: [ "v*" ]
 
 permissions:
   contents: read
@@ -74,7 +72,7 @@ jobs:
         with:
           context: ./triton/whisper
           # 指定你的 Dockerfile 文件名
-          file: ./Dockerfile
+          file: ./triton/whisper/Dockerfile
           # 仅支持 linux/amd64 平台
           platforms: linux/amd64
           # 设置为 true 以推送镜像
