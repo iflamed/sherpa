@@ -72,7 +72,7 @@ launch_triton_repo_python_backend() {
     python3 fill_template.py -i $model_repo/whisper/config.pbtxt engine_dir:${output_dir},n_mels:$n_mels,zero_pad:$zero_pad,triton_max_batch_size:${TRITON_MAX_BATCH_SIZE},max_queue_delay_microseconds:${MAX_QUEUE_DELAY_MICROSECONDS}
     python3 fill_template.py -i $model_repo/infer_bls/config.pbtxt engine_dir:${output_dir},triton_max_batch_size:${TRITON_MAX_BATCH_SIZE},max_queue_delay_microseconds:${MAX_QUEUE_DELAY_MICROSECONDS}
     echo "Launching triton server with model_repo: $model_repo"
-    tritonserver --model-repository=$model_repo
+    # tritonserver --model-repository=$model_repo
 }
 
 

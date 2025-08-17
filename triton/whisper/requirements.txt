@@ -12,3 +12,6 @@ scipy
 numpy
 huggingface_hub[cli]
 tensorrt-llm==0.15.0.dev2024101500
+fastapi[standard]
+python-multipart
+setuptools
