@@ -64,6 +64,8 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             # 当推送到 main 分支时，会生成 'latest' 标签
             type=raw,value=latest,enable={{is_default_branch}}
+            # when push to triton-whisper
+            type=edge,branch=triton-whisper
 
       # 6. 构建并推送 Docker 镜像
       # 使用 build-push-action 来执行构建和推送
