@@ -4,8 +4,8 @@ name: Docker Build and Push
 # 工作流触发器
 on:
   push:
-    # 仅在 main 分支被推送时触发
-    branches: [ "main" ]
+    # 仅在 triton-whisper 分支被推送时触发
+    branches: [ "triton-whisper" ]
     # 当一个符合 'v*.*.*' 格式的 tag 被推送时触发 (例如 v1.0.0)
     tags: [ "v*" ]
 
